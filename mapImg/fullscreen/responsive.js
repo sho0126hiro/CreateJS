@@ -7,7 +7,7 @@ async function main() {
     // -- Contents --
     let shape = createCircle(0,0,80,"DarkRed");
     let img = new Image();
-    img.src = "./img/cat.jpg";
+    img.src = "./img/map.png";
     let img_size = await getImageSize(img);
     let bmp   = createBackgroundBitmap("./img/map.png",stage,img_size);
     stage.addChild(bmp);
