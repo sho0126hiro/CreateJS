@@ -14,9 +14,9 @@ async function main() {
     let shape = createCircle(0,0,80,"DarkRed");
     let shape2 = createCircle(0,0,80,"blue");
     let img = new Image();
-    img.src = "./img/map.png";
+    img.src = "./img/map_compression.png";
     let img_size = await getImageSize(img);
-    let bmp   = createBackgroundBitmap("./img/map.png",stage,img_size);
+    let bmp   = createBackgroundBitmap("./img/map_compression.png",stage,img_size);
     stage.addChild(bmp);
     stage.addChild(shape);
     stage.addChild(shape2);
