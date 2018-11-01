@@ -1,11 +1,5 @@
 window.addEventListener("load", main);
 async function main() {
-    // retina対応コード
-    let canvas = document.getElementById("myCanvas");
-    canvas.width *= devicePixelRatio;
-    canvas.height *= devicePixelRatio;
-    canvas.style.width = String(canvas.width / devicePixelRatio) + "px";
-    canvas.style.height = String(canvas.height / devicePixelRatio) + "px";
     // ステージを作成
     let stage = new createjs.StageGL("myCanvas");
     stage.setClearColor('#FFFFFF');
@@ -24,13 +18,6 @@ async function main() {
     
     // リサイズ処理
     function handleResize(event) {
-        // canvasのサイズ調整
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        canvas.width *= devicePixelRatio;
-        canvas.height *= devicePixelRatio;
-        canvas.style.width = String(canvas.width / devicePixelRatio) + "px";
-        canvas.style.height = String(canvas.height / devicePixelRatio) + "px";
         // stageの大きさを画面幅・高さに合わせる
         stage.canvas.width = window.innerWidth;
         stage.canvas.height = window.innerHeight;
